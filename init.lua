@@ -16,7 +16,7 @@ MASTER_MODNAME =
 -- Place your mod name above this line, IT MUST BE THE SAME AS THE FOLDER.
 
 
-function un_natural_node(groups, texture, description, nodename, drawtype, sound)
+function un_natural_node(nodename, groups, texture, description, drawtype, sound)
 	minetest.register_node(MASTER_MODNAME..":"..nodename, {
 		description = description,
 		drawtype = drawtype,
@@ -24,13 +24,21 @@ function un_natural_node(groups, texture, description, nodename, drawtype, sound
 		is_ground_content = true,
 		groups = groups,
 		sounds = "default.node_sound_"..sound.."_defaults()",
-})
+}) end
 
-function basic_node(groups, texture, description, nodename, sound)
+function basic_node(nodename, groups, texture, description, sound)
 	minetest.register_node(MASTER_MODNAME..":"..nodename, {
 		description = description,
 		tiles = texture,
 		is_ground_content = true,
 		groups = groups,
 		sounds = "default.node_sound_"..sound.."_defaults()",
-})
+}) end
+
+basic_node("test",
+		{crumbly},
+		{"test.png},
+		"Testing",
+		"dirt",)
+		
+		--Example Code. it should work, hopefully. (I won't test.)
