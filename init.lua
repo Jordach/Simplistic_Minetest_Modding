@@ -17,7 +17,7 @@ MASTER_MODNAME =
 
 
 function un_natural_node(groups, texture, description, nodename, drawtype, sound)
-	minetest.register_node("MASTER_MODNAME"..:.."nodename", {
+	minetest.register_node(MASTER_MODNAME..":"..nodename, {
 		description = description,
 		drawtype = drawtype,
 		tiles = texture,
@@ -27,7 +27,7 @@ function un_natural_node(groups, texture, description, nodename, drawtype, sound
 })
 
 function basic_node(groups, texture, description, nodename, sound)
-	minetest.register_node("MASTER_MODNAME"..:.."nodename", {
+	minetest.register_node(MASTER_MODNAME..":"..nodename, {
 		description = description,
 		tiles = texture,
 		is_ground_content = true,
